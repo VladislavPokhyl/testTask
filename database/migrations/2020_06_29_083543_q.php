@@ -27,12 +27,12 @@ class Q extends Migration
             $table->string("city");
             $table->timestamps();
         });
-        Schema::create('adImages',function(Blueprint $table)
+        Schema::create('adimages',function(Blueprint $table)
         {
             $table->increments('id');
             $table->string("name");
             $table->integer('adId')->unsigned();
-            $table->foreign("adId")->references('id')->on('Ads')->onDelete('cascade');
+            $table->foreign("adId")->references('id')->on('ads')->onDelete('cascade');
    //  $table->binary("img")->nullable();
             $table->timestamps();
         });
@@ -47,6 +47,6 @@ class Q extends Migration
     {
         Schema::dropIfExists("users");
         Schema::dropIfExists("ads");
-        Schema::dropIfExists("adImages");
+        Schema::dropIfExists("adimages");
     }
 }
