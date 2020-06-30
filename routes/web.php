@@ -16,16 +16,16 @@
 });*/
 Route::get('/', 'HomeController@index')->name('home');
 
-Route::post('/home/search', [
+Route::post('/Home/search', [
     'uses' => 'HomeController@search'
 ]);
-Route::post('/home/create', [
+Route::post('/Home/create', [
     'uses' => 'HomeController@create'
 ]);
 //Route::post('Home/cities','HomeController@cities')->name('Home.city');
 
 
-Route::get("home/cities/{id}", "HomeController@cities");
+Route::get("Home/cities/{id}", "HomeController@cities");
 Auth::routes();
 Route::get('pagination',array('as'=>'ajax.pagination','uses'=>'HomeController@index'));
 

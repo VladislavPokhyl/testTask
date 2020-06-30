@@ -33,9 +33,9 @@ class HomeController extends Controller
         $ads = Ads::with(['image'])->orderByDesc("created_at")->paginate(10);
         $regions= workWithRegions2::getAllRegions();
         if ($request->ajax()) {
-            return view('home.cars', ['ads'=>$ads,'regions'=>$regions]);
+            return view('Home.cars', ['ads'=>$ads,'regions'=>$regions]);
         }
-        return view('home.index', ['ads'=>$ads,'regions'=>$regions]);
+        return view('Home.Index', ['ads'=>$ads,'regions'=>$regions]);
     }
     public function search(Request $request){
         $query=$this->build($request);
@@ -43,7 +43,7 @@ class HomeController extends Controller
 
         $regions=workWithRegions2::getAllRegions();
 
-        return view("home.search",['ads'=>$ads,'regions'=>$regions]);
+        return view("Home.Search",['ads'=>$ads,'regions'=>$regions]);
     }
     private function build(Request $request){
         $query = DB::table('ads');
