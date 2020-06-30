@@ -13,7 +13,7 @@ class Q extends Migration
      */
     public function up()
     {
-        Schema::create('ads',function(Blueprint $table)
+       /* Schema::create('ads',function(Blueprint $table)
         {
             $table->increments('id');
             $table->bigInteger("userId")->unsigned();
@@ -26,7 +26,7 @@ class Q extends Migration
             $table->string("region");
             $table->string("city");
             $table->timestamps();
-        });
+        });*/
         Schema::create('adimages',function(Blueprint $table)
         {
             $table->increments('id');
