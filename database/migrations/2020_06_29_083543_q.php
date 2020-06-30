@@ -45,7 +45,7 @@ class Q extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists("users");
+        //Schema::dropIfExists("users");
         Schema::dropIfExists("ads");
         Schema::dropIfExists("adimages");
     }
