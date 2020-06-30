@@ -94,7 +94,7 @@
 
             }}
             if(value!=-1){
-                ao.open("GET","/home/cities/"+value,true);
+                ao.open("GET","/Home/cities/"+value,true);
                 ao.send(null);
             }
 

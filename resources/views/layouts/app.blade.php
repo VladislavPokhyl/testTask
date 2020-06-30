@@ -213,7 +213,7 @@
                 cities.innerHTML=resp;
 
             }}
-        ao.open("GET","/home/cities/"+value,true);
+        ao.open("GET","/Home/cities/"+value,true);
         ao.send(null);
     }
 </script>
